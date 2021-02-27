@@ -1,22 +1,32 @@
-  
 ---
-layout: default
 ---
-<!DOCTYPE html>
-<html>
+ <!DOCTYPE html>
+ <html>
 		<head>
 					<meta charset="utf-8">
-							<title>{{site.data.details.name}}'s Home</title>
+							<title>Vasilis CV</title>
 								</head>
 									<body>
-												<h1>Hello World, this is the {{site.data.details.name}}!</h1>
-														<p>Reach me at: 
-																<ul>
-																			 {% for url in site.data.details.urls %}
-																			 		  <li><a href="http://{{url}}">{{url}}</a></li>
-																					  		 {% endfor %}
-																							 		</ul>
-																											</p>
-																													<p>Hello!</p>
-																														</body>
+												<h1>Bio</h1>
+														<p>Name:{{site.data.details.name}}</p>
+																<p>Birth Date:{{site.data.details.birthdate}}</p>
+																		<p>Location:{{site.data.details.location}}</p>
+																				<p>Email: <a href="mailto: {{site.data.details.email}}">{{site.data.details.email}}</a></p>
+
+																						<h2>Education</h2>
+																								<ul>
+																											 {% for edu in site.data.details.education %}
+																											 		   <li>{{edu}}</li>
+																													   		 {% endfor %}
+																															 		</ul>
+																																			
+																																			<h3>Hobbies</h3>
+																																					<ul>
+																																								 {% for hb in site.data.details.hobbies %}
+																																								 		   <li>{{hb}}</li>
+																																										   		 {% endfor %}
+																																												 		</ul>
+
+																																																
+																																															</body>
 </html>
