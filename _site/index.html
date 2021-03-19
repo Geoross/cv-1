@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+---
+---
  <!DOCTYPE html>
  <html>
 		<head>
@@ -6,31 +9,28 @@
 								</head>
 									<body>
 												<h1>Bio</h1>
-														<p>Name:Georgios Spyridon Rossis</p>
-																<p>Birth Date:July 06 2000</p>
-																		<p>Location:Corfu center, 49100</p>
-																				<p>Email: <a href="mailto: p18ross@ionio.gr">p18ross@ionio.gr</a></p>
+														<p>Name:{{site.data.details.name}}</p>
+																<p>Birth Date:{{site.data.details.birthdate}}</p>
+																		<p>Location:{{site.data.details.location}}</p>
+																				<p>Email: <a href="mailto: {{site.data.details.email}}">{{site.data.details.email}}</a></p>
 
 																						<h2>Education</h2>
 																								<ul>
-																											 
-																											 		   <li>Genesis Private School</li>
-																													   		 
-																											 		   <li>Ionian University, Department of Informatics, 2018</li>
-																													   		 
+																											 {% for edu in site.data.details.education %}
+																											 		   <li>{{edu}}</li>
+																													   		 {% endfor %}
 																															 		</ul>
 																																			
 																																			<h3>Hobbies</h3>
 																																					<ul>
-																																								 
-																																								 		   <li>Playing guitar</li>
-																																										   		 
-																																								 		   <li>Digital drawing</li>
-																																										   		 
-																																								 		   <li>Working out</li>
-																																										   		 
+																																								 {% for hb in site.data.details.hobbies %}
+																																								 		   <li>{{hb}}</li>
+																																										   		 {% endfor %}
 																																												 		</ul>
 
 																																																
 																																															</body>
 </html>
+=======
+test
+>>>>>>> ff3e69d557f0436f6628c8dee66f01d4c9226208
